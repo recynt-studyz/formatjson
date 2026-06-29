@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
+import ToolNav from './ToolNav'
 
 type Mode = 'format' | 'minify' | 'validate'
 type IndentSize = 2 | 4 | '\t'
@@ -265,6 +266,7 @@ export default function Formatter() {
           </span>
         </div>
       </header>
+      <ToolNav />
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 py-6">
         {/* Mode toolbar */}

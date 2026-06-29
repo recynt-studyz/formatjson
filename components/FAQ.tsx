@@ -1,4 +1,9 @@
-const faqs = [
+export interface FaqItem {
+  q: string
+  a: string
+}
+
+const defaultFaqs: FaqItem[] = [
   {
     q: 'What is a JSON formatter?',
     a: 'A JSON formatter (also called a JSON beautifier or JSON pretty printer) takes raw, compact JSON text and adds indentation and line breaks to make it human-readable. formatjson.app formats your JSON instantly in the browser using native JavaScript — no server required.',
@@ -45,7 +50,8 @@ const faqs = [
   },
 ]
 
-export default function FAQ() {
+export default function FAQ({ questions }: { questions?: FaqItem[] }) {
+  const faqs = questions ?? defaultFaqs
   return (
     <section className="w-full max-w-3xl mx-auto">
       <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
