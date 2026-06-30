@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ToolHeader from '@/components/ToolHeader'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
@@ -11,11 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <header className="border-b border-gray-100 dark:border-gray-800 px-6 py-3 bg-white dark:bg-[#0f172a]">
-        <a href="/" className="font-mono font-bold text-xl text-gray-900 dark:text-white tracking-tight hover:text-[#2563EB] transition">
-          formatjson.app
-        </a>
-      </header>
+      <ToolHeader />
 
       <main className="max-w-2xl mx-auto px-4 py-12 flex-1 bg-white dark:bg-[#0f172a]">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">About formatjson.app</h1>
@@ -48,6 +45,10 @@ export default function AboutPage() {
             <li>Real-time json formatter with 300ms debounce</li>
             <li>JSON validator with plain-English error messages</li>
             <li>JSON minifier (single-line output)</li>
+            <li>JSON repair — auto-fix trailing commas, comments, single quotes, unquoted keys</li>
+            <li>JSON to CSV converter with nested-object flattening</li>
+            <li>JSON diff — compare two objects and highlight changes</li>
+            <li>JSON tree viewer — collapsible interactive tree with type badges</li>
             <li>Syntax highlighting (keys, strings, numbers, booleans, null)</li>
             <li>Configurable indent: 2 spaces, 4 spaces, or tab</li>
             <li>File upload by drag and drop</li>

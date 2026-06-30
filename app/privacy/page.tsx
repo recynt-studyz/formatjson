@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ToolHeader from '@/components/ToolHeader'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
@@ -11,11 +12,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <>
-      <header className="border-b border-gray-100 dark:border-gray-800 px-6 py-3 bg-white dark:bg-[#0f172a]">
-        <a href="/" className="font-mono font-bold text-xl text-gray-900 dark:text-white tracking-tight hover:text-[#2563EB] transition">
-          formatjson.app
-        </a>
-      </header>
+      <ToolHeader />
 
       <main className="max-w-2xl mx-auto px-4 py-12 flex-1 bg-white dark:bg-[#0f172a]">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Privacy Policy</h1>

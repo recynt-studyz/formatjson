@@ -72,10 +72,19 @@ export default function JsonDiffPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema).replace(/</g, '\\u003c') }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema).replace(/</g, '\\u003c') }} />
 
+      <h1 className="sr-only">JSON Diff — Compare Two JSON Objects Online</h1>
       <JsonDiffWrapper />
 
       <section className="bg-white dark:bg-[#0f172a]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-10">
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+            This <strong>JSON diff tool</strong> compares two JSON objects and highlights every
+            added, removed, and changed value with color-coded results. The diff algorithm
+            recursively traverses nested structures and reports differences using full dot-notation
+            paths. All comparison logic runs entirely in your browser.{' '}
+            <strong>Your JSON never leaves your device.</strong> Paste both objects above and see
+            the diff instantly.
+          </p>
           <FAQ questions={faqItems} />
         </div>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-6">

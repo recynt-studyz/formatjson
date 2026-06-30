@@ -72,10 +72,18 @@ export default function JsonTreePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema).replace(/</g, '\\u003c') }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema).replace(/</g, '\\u003c') }} />
 
+      <h1 className="sr-only">JSON Tree Viewer — Visualize JSON Structure Online</h1>
       <JsonTreeWrapper />
 
       <section className="bg-white dark:bg-[#0f172a]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-10">
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+            This <strong>JSON tree viewer</strong> renders any JSON as an interactive collapsible
+            tree, making it easy to explore complex or deeply nested API responses. Type badges
+            show the data type of every value at a glance. Nodes up to depth 3 are expanded
+            automatically. All rendering runs entirely in your browser.{' '}
+            <strong>Your JSON never leaves your device.</strong>
+          </p>
           <FAQ questions={faqItems} />
         </div>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-6">

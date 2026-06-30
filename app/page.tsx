@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     'Format, validate and beautify JSON instantly in your browser. Free JSON formatter with syntax highlighting, error detection, and minifier. No signup required.',
   alternates: { canonical: 'https://formatjson.app' },
+  robots: { index: true, follow: true },
 }
 
 const faqSchema = {
@@ -156,6 +157,9 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema).replace(/</g, '\\u003c') }}
       />
+
+      {/* Server-rendered H1 for crawlers — visually hidden */}
+      <h1 className="sr-only">JSON Formatter &amp; Validator — Free, Instant, Private</h1>
 
       {/* Formatter — includes its own header */}
       <FormatterWrapper />

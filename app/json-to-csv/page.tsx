@@ -72,10 +72,19 @@ export default function JsonToCsvPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema).replace(/</g, '\\u003c') }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema).replace(/</g, '\\u003c') }} />
 
+      <h1 className="sr-only">JSON to CSV Converter — Free, Instant, No Upload</h1>
       <JsonToCsvWrapper />
 
       <section className="bg-white dark:bg-[#0f172a]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-10">
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+            This <strong>JSON to CSV converter</strong> turns JSON arrays of objects into
+            spreadsheet-ready CSV files instantly. Nested objects are flattened with dot notation
+            and arrays within objects are joined with semicolons. All conversion runs entirely in
+            your browser using native JavaScript.{' '}
+            <strong>Your JSON never leaves your device.</strong> Paste a JSON array on the left
+            and download or copy the CSV on the right.
+          </p>
           <FAQ questions={faqItems} />
         </div>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-6">
