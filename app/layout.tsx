@@ -45,7 +45,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <head>
-        <meta name="google-adsense-account" content="ca-pub-8792838105001561" />
+        <meta name="google-adsense-account" content="ca-pub-5035661017594256" />
         {/* Prevent dark-mode flash */}
         <script
           dangerouslySetInnerHTML={{
@@ -57,7 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
         <Script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8792838105001561"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5035661017594256"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />

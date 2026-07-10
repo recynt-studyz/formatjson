@@ -22,7 +22,7 @@ export default function AdBanner({ slot }: { slot: string }) {
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}
-        data-ad-client="ca-pub-8792838105001561"
+        data-ad-client="ca-pub-5035661017594256"
         data-ad-slot={slot}
         data-ad-format="auto"
         data-full-width-responsive="true"
