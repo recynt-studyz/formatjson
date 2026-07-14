@@ -52,6 +52,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             __html: `(function(){try{var s=localStorage.getItem('formatjson-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(s===null&&d)){document.documentElement.classList.add('dark')}}catch(e){}})()`,
           }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ERZN0RJCET"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ERZN0RJCET');
+          `}
+        </Script>
       </head>
       <body className="min-h-full flex flex-col bg-white dark:bg-[#0f172a] text-gray-900 dark:text-[#e2e8f0]">
         {children}
